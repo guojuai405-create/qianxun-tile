@@ -40,6 +40,11 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  verification: {
+    other: {
+      "baidu-site-verification": "codeva-F91QNJTqkS",
+    },
+  },
 };
 
 // JSON-LD 结构化数据：帮助豆包 / 搜索引擎准确理解门店信息
