@@ -7,8 +7,6 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  // 每个路由生成独立目录 index.html，方便部署到 nginx / 对象存储
-  trailingSlash: true,
 };
 
 export default nextConfig;
