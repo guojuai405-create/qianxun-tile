@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://www.qianxuntile.com/sitemap.xml",
+    sitemap: "https://qianxuntile.com/sitemap.xml",
   };
 }
