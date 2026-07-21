@@ -1,3 +1,9 @@
 {
-  "cleanUrls": false
+  "cleanUrls": false,
+  "rewrites": [
+    {
+      "source": "/toutiaohao_verify.html",
+      "destination": "/toutiaohao_verify"
+    }
+  ]
 }
