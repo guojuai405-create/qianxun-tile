@@ -477,13 +477,21 @@ export default function Home() {
 
       {/* 页脚 */}
       <footer className="bg-stone-900 py-8">
-        <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div className="max-w-6xl mx-auto px-6 flex flex-col items-center gap-3 text-center">
           <p className="text-stone-500 text-xs tracking-wider">
             © 2026 武汉千寻瓷砖美学馆 · 版权所有
           </p>
           <p className="text-stone-600 text-xs">
             汉西红星美凯龙5楼中庭 · 周一至周日 9:00-18:00
           </p>
+          <a
+            href="https://beian.miit.gov.cn/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-stone-500 hover:text-gold-400 text-xs transition-colors"
+          >
+            鄂ICP备2026048392号-1
+          </a>
         </div>
       </footer>
 
