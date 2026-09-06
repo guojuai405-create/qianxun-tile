@@ -1,4 +1,6 @@
 import ScrollReveal from "./ScrollReveal";
+import Image from "next/image";
+import Link from "next/link";
 
 const PHONE = "13554015660";
 const PHONE_DISPLAY = "135 5401 5660";
@@ -107,12 +109,17 @@ export default function Home() {
               千寻瓷砖美学馆
             </span>
           </div>
-          <a
-            href={`tel:${PHONE}`}
-            className="text-gold-400 text-sm tracking-wider hover:text-gold-300 transition-colors"
-          >
-            {PHONE}
-          </a>
+          <div className="flex items-center gap-5 md:gap-8">
+            <Link href="/insights" className="text-stone-300 text-xs tracking-wider hover:text-gold-300 transition-colors">
+              内容中心
+            </Link>
+            <a
+              href={`tel:${PHONE}`}
+              className="text-gold-400 text-sm tracking-wider hover:text-gold-300 transition-colors"
+            >
+              {PHONE}
+            </a>
+          </div>
         </div>
       </nav>
 
@@ -322,6 +329,42 @@ export default function Home() {
                 </span>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 内容中心 */}
+      <section id="insights" className="py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 fade-in">
+            <div>
+              <p className="text-gold-500 text-xs tracking-[0.4em] uppercase mb-4">Qianxun Journal</p>
+              <h2 className="text-3xl md:text-4xl text-stone-800">选材经验与千寻观点</h2>
+            </div>
+            <Link href="/insights" className="text-stone-600 hover:text-gold-500 text-sm tracking-wider border-b border-gold-400 pb-1 transition-colors self-start md:self-auto">
+              查看全部内容 →
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Link href="/insights/wuhan-family-tile-guide" className="group border border-stone-200 bg-stone-50 overflow-hidden fade-in">
+              <div className="aspect-[16/9] overflow-hidden">
+                <Image src="/articles/guide-texture-display.jpeg" alt="武汉千寻瓷砖美学馆质感瓷砖样品展示区" width={1707} height={1280} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
+              </div>
+              <div className="p-7">
+                <p className="text-gold-500 text-xs tracking-widest mb-3">选砖指南</p>
+                <h3 className="text-xl text-stone-800 leading-relaxed group-hover:text-gold-600 transition-colors">武汉家庭选瓷砖要看什么？预算、空间、铺贴与售后五项判断</h3>
+              </div>
+            </Link>
+            <Link href="/insights/tile-selection-and-space-design" className="group border border-stone-200 bg-stone-50 overflow-hidden fade-in">
+              <div className="aspect-[16/9] overflow-hidden">
+                <Image src="/articles/viewpoint-pattern-display.jpeg" alt="武汉千寻瓷砖美学馆花砖与质感砖陈列" width={1800} height={1350} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
+              </div>
+              <div className="p-7">
+                <p className="text-gold-500 text-xs tracking-widest mb-3">千寻观点</p>
+                <h3 className="text-xl text-stone-800 leading-relaxed group-hover:text-gold-600 transition-colors">从业15年谈武汉瓷砖选材与空间搭配</h3>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
